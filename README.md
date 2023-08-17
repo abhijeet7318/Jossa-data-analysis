@@ -15,8 +15,9 @@ JoSAA-Data-Analyzer is a Django web application that predicts the chances of adm
 
 We would like to thank the following contributors for their valuable contributions to JoSAA-Data-Analyzer:
 
-- Rahul Singaria([@RAHUL-SINGARIA](https://github.com/SriChaitu))
-- Abhijeet Singh Kushwaha([@Kota04](https://github.com/Kota04))
+- Rahul Singaria([@RAHUL-SINGARIA](https://github.com/RAHUL-SINGARIA))
+- Abhijeet Singh Kushwaha([@abhijeet7318](https://github.com/abhijeet7318))
+- Keerti Lata([@keerti](https://github.com/mikrokosmos2109))
 
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
