@@ -1,0 +1,143 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'start.css' %}">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="http://d3js.org/topojson.v0.min.js"></script>
+  <title>Josaa Analysis</title>
+</head>
+<body>
+    <div class="compete">
+    <div>
+        <h1 data-aos="fade-right" class="lineone">What are the top 10 IITs???</h1>
+        <h1 data-aos="fade-left" class="linetwo">The statistics of NIRF and QS World Rankings of Top 10 Institutes.</h1>
+    </div>
+
+    <div id="rankings">
+        <table>
+          <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>NIRF Ranking</th>
+            <th>NIRF Score</th>
+            <th>QS World Ranking</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>IIT Madras</td>
+            <td>1</td>
+            <td>90.04</td>
+            <td>250</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>IIT Delhi</td>
+            <td>2</td>
+            <td>88.12</td>
+            <td>174</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>IIT Bombay</td>
+            <td>3</td>
+            <td>83.96</td>
+            <td>172</td>
+          </tr>
+  
+          <tr>
+            <td>4</td>
+            <td>IIT Kanpur</td>
+            <td>4</td>
+            <td>82.56</td>
+            <td>264</td>
+          </tr>
+  
+          <tr>
+            <td>5</td>
+            <td>IIT Kharagpur</td>
+            <td>5</td>
+            <td>78.89</td>
+            <td>270</td>
+          </tr>
+  
+          <tr>
+            <td>6</td>
+            <td>IIT Roorkee</td>
+            <td>6</td>
+            <td>76.70</td>
+            <td>369</td>
+          </tr>
+  
+          <tr>
+            <td>7</td>
+            <td>IIT Guwahati</td>
+            <td>7</td>
+            <td>72.98</td>
+            <td>384</td>
+          </tr>
+  
+          <tr>
+            <td>8</td>
+            <td>IIT Hyderabad</td>
+            <td>9</td>
+            <td>68.03</td>
+            <td>581-590</td>
+          </tr>
+  
+          <tr>
+            <td>9</td>
+            <td>IIT Varanasi(BHU)</td>
+            <td>13</td>
+            <td>63.51</td>
+            <td>651-700</td>
+          </tr>
+  
+          <tr>
+            <td>10</td>
+            <td>IISM Dhanbad</td>
+            <td>14</td>
+            <td>63.50</td>
+            <td>1001-1200</td>
+          </tr>
+        </table>
+
+    </div>
+</div>
+
+<div class="Cut-offs">
+  <div class="card">
+    <h1 class="heading">Want to check all the potential choices for your rank?</h1>
+    <a href="rank" class="cut-btn">Click Me</a>
+  </div>
+  <div class="card">
+    <h1 class="heading">Narrow down my choices by branch</h1>
+    <a href="analyser" class="cut-btn">Click Me</a>
+  </div>
+  <div class="card">
+    <h1 class="heading">Narrow down my choices by Institute</h1>
+    <a href="analyser2" class="cut-btn">Click Me</a>
+  </div>
+  <div class="card">
+    <h1 class="heading">For branch wise trends</h1>
+    <a href="analyser3" class="cut-btn">Click Me</a>
+  </div>
+  <div class="card">
+    <h1 class="heading">For Institute wise trends</h1>
+    <a href="analyser4" class="cut-btn">Click Me</a>
+  </div>
+
+
+</div>
+<script>
+
+   </script>
+   
+</body>
+
+</html>

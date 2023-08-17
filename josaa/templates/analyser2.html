@@ -1,0 +1,79 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'start.css' %}">
+  <link rel="stylesheet" href="{% static 'rank-analyser.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Josaa Analysis</title>
+
+</head>
+    <div class="rank-cont">    
+    
+        <h1 class="rank">Filter your choices</h1>
+        <div style="align-items: center; text-align: center;">
+    <form method="post" action="display2" >
+        <input type="number" placeholder="Enter Your Rank" name="rank3" required>
+        <br>
+        <select id="category" name="category3" required>
+            <option value="">Select your Category:</option>
+            <option value="OPEN">OPEN</option>
+            <option value="EWS">EWS</option>
+            <option value="OPEN(PwD)">OPEN(PwD)</option>
+            <option value="OBC-NCL">OBC-NCL</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+        </select>
+        <br>
+        <select id="iit" name="iit3" required>
+            <option value="">Select IIT:</option>
+            <option value="Indian Institute of Technology Bhubaneswar">Indian Institute of Technology Bhubaneswar</option>
+            <option value="Indian Institute of Technology Bombay">Indian Institute of Technology Bombay</option>
+            <option value="Indian Institute of Technology Mandi">Indian Institute of Technology Mandi</option>
+            <option value="Indian Institute of Technology Delhi">Indian Institute of Technology Delhi</option>
+            <option value="Indian Institute of Technology Indore">Indian Institute of Technology Indore</option>
+            <option value="Indian Institute of Technology Kharagpur">Indian Institute of Technology Kharagpur</option>
+            <option value="Indian Institute of Technology Hyderabad">Indian Institute of Technology Hyderabad</option>
+            <option value="Indian Institute of Technology Jodhpur">Indian Institute of Technology Jodhpur</option>
+            <option value="Indian Institute of Technology Kanpur">Indian Institute of Technology Kanpur</option>
+            <option value="Indian Institute of Technology Madras">Indian Institute of Technology Madras</option>
+            <option value="Indian Institute of Technology Gandhinagar">Indian Institute of Technology Gandhinagar</option>
+            <option value="Indian Institute of Technology Patna">Indian Institute of Technology Patna</option>
+            <option value="Indian Institute of Technology Roorkee">Indian Institute of Technology Roorkee</option>
+            <option value="Indian Institute of Technology (ISM) Dhanbad">Indian Institute of Technology (ISM) Dhanbad</option>
+            <option value="Indian Institute of Technology Ropar">Indian Institute of Technology Ropar</option>
+            <option value="Indian Institute of Technology (BHU) Varanasi">Indian Institute of Technology (BHU) Varanasi</option>
+            <option value="Indian Institute of Technology Guwahati">Indian Institute of Technology Guwahati</option>
+            <option value="Indian Institute of Technology Bhilai">Indian Institute of Technology Bhilai</option>
+            <option value="Indian Institute of Technology Goa">Indian Institute of Technology Goa</option>
+            <option value="Indian Institute of Technology Palakkad">Indian Institute of Technology Palakkad</option>
+            <option value="Indian Institute of Technology Tirupati">Indian Institute of Technology Tirupati</option>
+            <option value="Indian Institute of Technology Jammu">Indian Institute of Technology Jammu</option>
+            <option value="Indian Institute of Technology Dharwad">Indian Institute of Technology Dharwad</option>
+        </select>
+        <br>
+        <br><br><br>
+                <label for="gender">Select your Gender:</label>
+                {% csrf_token %} 
+                <input type="radio" id="Gender-Neutral" name="gender3" value="Gender-Neutral" required>
+                <label for="male">Gender-Neutral</label>
+                <input type="radio" id="Female-only (including Supernumerary)" name="gender3"
+                    value="Female-only (including Supernumerary)">
+                <label for="female">Female-only (including Supernumerary)</label>
+                <br>
+                <input type="submit" value="Filter my seats by IIT">
+
+    </form>
+</div>
+
+</div>
+
+
+<body>
+
+</body>
+
+</html>

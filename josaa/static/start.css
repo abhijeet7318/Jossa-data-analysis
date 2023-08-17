@@ -1,0 +1,86 @@
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: black;
+    color: white;
+    font-family: kalam;
+  }
+
+
+  html::-webkit-scrollbar {
+    display: inline;
+    padding: 1px;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background-color: rgb(172, 172, 172);
+    padding: 1px;
+  }
+.linetwo{
+    float: right;
+}
+
+#rankings{
+    padding: 2px;
+    margin: px;
+    display: inline-block;
+    border: solid white 2px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 4px whitesmoke;
+}
+table{
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+}
+tr{
+    border-bottom: solid white 2px;
+}
+td {
+    text-align: center;
+  }
+
+  table, th, td {
+    border: 1px solid white;
+  }
+  .Cut-offs{
+    border: solid white 2px;
+    padding: 10px;
+    border-radius: 5px;  
+    margin-left: 200px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 4px 4px whitesmoke;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading {
+    animation-duration: 3s;
+    animation-name: slidein;
+    border-bottom: 20px;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+ .cut-btn{
+  text-decoration: none;
+  border: solid white 2px;
+  color: azure;
+  padding: 5px 10px;
+  border-radius: 10px;
+ }
+ 
+

@@ -1,0 +1,26 @@
+
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <link rel="stylesheet" href="{% static 'index.css' %}">
+  <title>Josaa Analysis</title>
+
+</head>
+<body>
+    {% for x in ps %}
+        {% if x.open <= rank1 and x.close >= rank1 and x.seat_type == cate1 and x.gender == gend1 and x.year == year1 and x.roundd == roundd1 %}
+            <li>{{ x.institute }}</li>
+            <li>{{ x.program }}</li>
+            <br>      
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
+

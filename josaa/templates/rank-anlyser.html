@@ -1,0 +1,68 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'start.css' %}">
+  <link rel="stylesheet" href="{% static 'rank-analyser.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Josaa Analysis</title>
+
+</head>
+    <div class="rank-cont">    
+    
+        <h1 class="rank">Potential choices</h1>
+        <div style="align-items: center; text-align: center;">
+    <form method="post" action="display" >
+        <input type="number" placeholder="Enter Your Rank" name="rank" required>
+        <br>
+        <select id="category" name="category" required>
+            <option value="">Select your Category:</option>
+            <option value="OPEN">OPEN</option>
+            <option value="EWS">EWS</option>
+            <option value="OPEN(PwD)">OPEN(PwD)</option>
+            <option value="OBC-NCL">OBC-NCL</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+        </select>
+        <br>
+        <select id="year" name="year" required>
+            <option value="">Select year:</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+        </select>
+        <br>
+        <select id="roundd" name="roundd" required>
+            <option value="">Select round:</option>
+            <option value="1">Round 1</option>
+            <option value="2">Round 2</option>
+            <option value="3">Round 3</option>
+            <option value="4">Round 4</option>
+            <option value="5">Round 5</option>
+            <option value="6">Round 6</option>
+        </select>
+        <br><br><br>
+                <label for="gender">Select your Gender:</label>
+                {% csrf_token %} 
+                <input type="radio" id="Gender-Neutral" name="gender" value="Gender-Neutral" required>
+                <label for="male">Gender-Neutral</label>
+                <input type="radio" id="Female-only (including Supernumerary)" name="gender"
+                    value="Female-only (including Supernumerary)">
+                <label for="female">Female-only (including Supernumerary)</label>
+                <br>
+                <input type="submit" value="Predict Seats">
+
+    </form>
+</div>
+
+</div>
+
+
+<body>
+
+</body>
+
+</html>

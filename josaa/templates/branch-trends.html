@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cut-off.css">
+  <title>Josaa Analysis</title>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+    <script>
+        var values ={
+            labels: [2020, 2021, 2022],
+            datasets: [
+                {% for x in ps2 %}
+                {
+                    label: '{{x.program}}',
+                    data: [
+                           {% for y in ps %}
+                                {% if y.program == x.program %} 
+                                    {{y.close}},
+                                {% endif %} 
+                           {% endfor %}
+                    ],
+                    fill: false,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)',
+                        'rgba(255, 159, 64, 0.8)',
+                        'rgba(240, 120, 50, 0.8)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(240, 120, 50, 1)',
+                    ],
+                    borderWidth: 2
+                },
+                {% endfor %}
+            ]
+        };
+
+        // for graph
+        const ctx = document.getElementById('myChart');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: values.labels,
+                datasets: values.datasets
+            },
+            options: {
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 0.5,
+                        to: 0.1,
+                        loop: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Branch-wise'
+                    },
+                    legend: {
+                        position: 'top',
+                        align: 'end',
+                    },
+                    labels: {
+                        textAlign: 'left',
+                        color: 'white',
+                        boxWidth: 16,
+                        font: {
+                            size: 12,
+                            family: "'Avenir', sans-serif",
+                            lineHeight: 2
+                        }
+                    }
+                },
+                elements: {
+                    point: {
+                        hitRadius: 5,
+                        hoverRadius: 8,
+                        pointStyle: 'rectRounded',
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: true,
+                            color: "#595959",
+                            lineWidth: 1
+                        },
+                        ticks: {
+                            color: "white",
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: true,
+                            color: "#595959"
+                        },
+                        ticks: {
+                            color: "white"
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

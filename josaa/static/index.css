@@ -1,0 +1,82 @@
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+
+  html::-webkit-scrollbar {
+    display: inline;
+    padding: 1px;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background-color: rgb(172, 172, 172);
+    padding: 1px;
+  }
+
+body{
+    background-color: black;
+    font-family: kalam;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    rotate: 320deg; 
+    
+}
+.content{
+    padding: 2%;
+    margin-left: 10px;  
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+#para{
+    font-size: 200%;
+}
+.content-1{
+    
+    
+    font-size: 170%;
+}
+.start-btn{
+    border: solid white 2px;
+    box-shadow: 0 0 3px 2px ;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+.start-btn:hover{
+    color: aquamarine;
+    transform: scale(5,9);
+}
+.think{
+    width: 20%;
+    
+  position: relative;
+  right: 5%;
+}
+
+@media screen and (max-width: 950px) {
+    .container{
+        display: block;
+        width: 100vw;
+    }
+    .logo{
+       margin-bottom: 20px;
+        width: 20%;
+    }
+    #para{
+        font-size: 30px;
+        width: 1;
+    }
+    .content{
+        font-size: 20px;
+        
+    }
+    
+}
